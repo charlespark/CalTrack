@@ -6,18 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Sandwich.destroy_all
-Bread.destroy_all
-Condiment.destroy_all
-Vegetable.destroy_all
-Salad.destroy_all
-Salad_Dressing.destroy_all
-Flatizza.destroy_all
-Beverage.destroy_all
-Dessert.destroy_all
+# Sandwich.destroy_all
+# Bread.destroy_all
+# Condiment.destroy_all
+# Vegetable.destroy_all
+# Salad.destroy_all
+# Salad_Dressing.destroy_all
+# Flatizza.destroy_all
+# Beverage.destroy_all
+# Dessert.destroy_all
 
 
-Sandwiches = Sandwich.create([
+sandwiches = Sandwich.create([
 	{
 		name: "",
 		serving_size: "",
@@ -704,7 +704,7 @@ Sandwiches = Sandwich.create([
 	}
 ]);
 
-Breads = Bread.create([
+breads = Bread.create([
 	{
 		name: "",
 		serving_size: "",
@@ -973,7 +973,7 @@ Breads = Bread.create([
 	# }
 ]);
 
-Condiments = Condiment.create([
+condiments = Condiment.create([
 	{
 		name: "",
 		serving_size: "",
@@ -1318,7 +1318,7 @@ Condiments = Condiment.create([
 	}
 ]);
 
-Vegetables = Vegetable.create([
+vegetables = Vegetable.create([
 	{
 		name: "",
 		serving_size: "",
@@ -1549,7 +1549,7 @@ Vegetables = Vegetable.create([
 	}
 ]);
 
-Salads = Salad.create([
+salads = Salad.create([
 	{
 		name: "",
 		serving_size: "",
@@ -2084,7 +2084,7 @@ Salads = Salad.create([
 	}
 ]);
 
-Salad_Dressings = Salad_Dressing.create([
+salad_dressings = Salad_Dressing.create([
 	{
 		name: "",
 		serving_size: "",
@@ -2144,7 +2144,7 @@ Salad_Dressings = Salad_Dressing.create([
 	}
 ]);
 
-Flatizzas = Flatizza.create([
+flatizzas = Flatizza.create([
 	{
 		name: "",
 		serving_size: "",
@@ -2242,7 +2242,7 @@ Flatizzas = Flatizza.create([
 	}
 ]);
 
-Beverages = Beverage.create([
+beverages = Beverage.create([
 	{
 		name: "",
 		serving_size: "",
@@ -2511,7 +2511,7 @@ Beverages = Beverage.create([
 	}
 ]);
 
-Desserts = Dessert.create([
+desserts = Dessert.create([
 	{
 		name: "",
 		serving_size: "",
@@ -2760,7 +2760,7 @@ Desserts = Dessert.create([
 		iron: 4
 	}
 ]);
-Soups = Soup.create([
+soups = Soup.create([
 	{
 		name: "",
 		serving_size: "",
@@ -3010,7 +3010,7 @@ Soups = Soup.create([
 	}
 ]);
 
-Breakfasts = Breakfast.create([
+breakfasts = Breakfast.create([
 	{
 		name: "",
 		serving_size: "",
@@ -3467,7 +3467,7 @@ Breakfasts = Breakfast.create([
 		calcium: 10,
 		iron: 10
 	}
-])
+]);
 
 
 
