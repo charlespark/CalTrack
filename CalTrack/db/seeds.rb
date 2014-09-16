@@ -6,16 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# Sandwich.destroy_all
-# Bread.destroy_all
-# Condiment.destroy_all
-# Vegetable.destroy_all
-# Salad.destroy_all
-# Salad_Dressing.destroy_all
-# Flatizza.destroy_all
-# Beverage.destroy_all
-# Dessert.destroy_all
-
+Sandwich.destroy_all
+Bread.destroy_all
+Condiment.destroy_all
+Vegetable.destroy_all
+Salad.destroy_all
+Salad_Dressing.destroy_all
+Flatizza.destroy_all
+Beverage.destroy_all
+Dessert.destroy_all
+Soup.destroy_all
+Breakfast.destroy_all
 
 sandwiches = Sandwich.create([
 	{
