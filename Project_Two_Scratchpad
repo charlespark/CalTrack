@@ -1,0 +1,19 @@
+What is on this page?
+
+This is one page that has drop down menus for each of Subway's menu offerings.
+There are several categories
+Sandwich
+Bread
+Vegetables
+Condiments
+Beverages
+Breakfasts
+Salads
+Salad Dressings
+Soups
+Desserts
+Flatizza
+
+Once the user selects a menu offering, the information will populate on the side of the page and add up all calories and associated information (name, serving_size, calories, calories_from_fat, total_fat, saturated_fat, trans_fat, cholesterol, sodium, carbohydrates, dietary_fiber, sugars, protein, vitamin_a, vitamin_c, calcium, iron).
+
+The collected nutritional information will appear in the form of the FDA Nutritional 
