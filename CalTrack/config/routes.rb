@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/signup' =>  'users#new', as: :signup
 
-  root 'sessions#index'
+  root 'menus#index'
   get '/login' => 'sessions#new', as: :sessions
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy', as: :log_out
@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   get 'users/new' => 'users#new'
   post 'users/' => 'users#create'
   
-  # SANDWICHES RESOURCE
-  get 'sandwiches/' => 'sandwiches#create'
+  # SUBWAY MENU RESOURCE
+  get 'menu/' => 'menus#index'
   
 
 
