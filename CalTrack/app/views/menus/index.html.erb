@@ -1,8 +1,28 @@
 <h1>Subway</h1>
+<p>What are you eating today?</p>
 <ul>
   <% @sandwiches.each do |sandwich| %>
-    <li>
-      <%= render sandwich %>
-    </li>
+    <li><%= render sandwich %></li>
+  <% @beverages.each do |beverage| %>
+    <li><%= render beverage %></li>
+  <% @breads.each do |bread| %>
+    <li><%= render bread %></li>
+  <% @breakfasts.each do |breakfast| %>
+    <li><%= render breakfast %></li>
+  <% @condiments.each do |condiment| %>
+    <li><%= render condiment %></li>
+  <% @desserts.each do |dessert| %>
+    <li><%= render dessert %></li>
+  <% @flatizzas.each do |flatizza| %>
+    <li><%= render flatizza %></li>
+  <% @salads.each do |salad| %>
+    <li><%= render salad %></li>
+  <% @salad_dressings.each do |salad_dressing| %>
+    <li><%= render salad_dressing %></li>
+  <% @soups.each do |soup| %>
+    <li><%= render soup %></li>
+  <% @vegetables.each do |vegetable| %>
+    <li><%= render vegetable %></li>
   <% end %>
 </ul>
+<% end %>

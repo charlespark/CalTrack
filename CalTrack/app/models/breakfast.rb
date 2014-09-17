@@ -18,4 +18,5 @@ field :vitamin_c, type: Float
 field :calcium, type: Float
 field :iron, type: Float
 
+belongs_to :menu
 end
