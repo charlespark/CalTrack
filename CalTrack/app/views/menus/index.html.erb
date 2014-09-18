@@ -2,27 +2,68 @@
 <p>What are you eating today?</p>
 <ul>
   <% @sandwiches.each do |sandwich| %>
-    <li><%= render sandwich %></li>
+    <li>
+      <%= sandwich.name %>
+    </li>
+  <% end %>
+
   <% @beverages.each do |beverage| %>
-    <li><%= render beverage %></li>
+    <li>
+      <%= beverage.name %>
+    </li>
+      <% end %>
+
   <% @breads.each do |bread| %>
-    <li><%= render bread %></li>
+    <li>
+      <%= bread.name %>
+    </li>
+      <% end %>
+
   <% @breakfasts.each do |breakfast| %>
-    <li><%= render breakfast %></li>
+    <li>
+      <%= breakfast.name %>
+    </li>
+      <% end %>
+
   <% @condiments.each do |condiment| %>
-    <li><%= render condiment %></li>
+    <li>
+      <%= condiment.name %>
+    </li>
+      <% end %>
+
   <% @desserts.each do |dessert| %>
-    <li><%= render dessert %></li>
+    <li>
+      <%= dessert.name %>
+    </li>
+      <% end %>
+
   <% @flatizzas.each do |flatizza| %>
-    <li><%= render flatizza %></li>
+    <li>
+      <%= flatizza.name %>
+    </li>
+      <% end %>
+
   <% @salads.each do |salad| %>
-    <li><%= render salad %></li>
+    <li>
+      <%= salad.name %>
+    </li>
+      <% end %>
+
   <% @salad_dressings.each do |salad_dressing| %>
-    <li><%= render salad_dressing %></li>
+    <li>
+      <%= salad_dressing.name %>
+    </li>
+      <% end %>
+
   <% @soups.each do |soup| %>
-    <li><%= render soup %></li>
+    <li>
+      <%= soup.name %>
+    </li>
+      <% end %>
+
   <% @vegetables.each do |vegetable| %>
-    <li><%= render vegetable %></li>
+    <li>
+      <%= vegetable.name %>
+    </li>
   <% end %>
 </ul>
-<% end %>

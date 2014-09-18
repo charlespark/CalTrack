@@ -1,6 +1,17 @@
 class MenusController < ApplicationController
   def index
     @menus = Menu.all
+    @sandwiches = Sandwich.all
+    @beverages = Beverage.all
+    @breads = Bread.all
+    @breakfasts = Breakfast.all
+    @condiments = Condiment.all
+    @desserts = Dessert.all
+    @flatizzas = Flatizza.all
+    @salads = Salad.all
+    @salad_dressings = Salad_Dressing.all
+    @soups = Soup.all
+    @vegetables = Vegetable.all
   end
 
   def new
