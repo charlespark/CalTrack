@@ -1,69 +1,113 @@
-<h1>Subway</h1>
+<!DOCTYPE html>
+<html>
+  <header>
+<h1><i>Subway</i></h1>
 <p>What are you eating today?</p>
-<ul>
+</header>
+
+<h2>Bread</h2>
+<ul class="checkbox-list">
+  <% @breads.each do |bread| %>
+  <li>
+  <%= check_box_tag bread.name %> <%= bread.name %> 
+
+
+<%= form_for :menu do |m| %>
+ <%= m.collection_check_boxes(:bread_ids, Bread.all, :id, :calories) %>
+  <%= m.submit %>
+
+<% end %>
+
+  </li>
+      <% end %>
+    </ul>
+<br>
+<h2>Sandwiches</h2>
+<ul class="checkbox-list">
   <% @sandwiches.each do |sandwich| %>
     <li>
-      <%= sandwich.name %>
-    </li>
-  <% end %>
-
-  <% @beverages.each do |beverage| %>
-    <li>
-      <%= beverage.name %>
+  <%= check_box_tag sandwich.name =%> <%= sandwich.name %>
     </li>
       <% end %>
-
-  <% @breads.each do |bread| %>
-    <li>
-      <%= bread.name %>
-    </li>
-      <% end %>
-
-  <% @breakfasts.each do |breakfast| %>
-    <li>
-      <%= breakfast.name %>
-    </li>
-      <% end %>
-
-  <% @condiments.each do |condiment| %>
-    <li>
-      <%= condiment.name %>
-    </li>
-      <% end %>
-
-  <% @desserts.each do |dessert| %>
-    <li>
-      <%= dessert.name %>
-    </li>
-      <% end %>
-
-  <% @flatizzas.each do |flatizza| %>
-    <li>
-      <%= flatizza.name %>
-    </li>
-      <% end %>
-
-  <% @salads.each do |salad| %>
-    <li>
-      <%= salad.name %>
-    </li>
-      <% end %>
-
-  <% @salad_dressings.each do |salad_dressing| %>
-    <li>
-      <%= salad_dressing.name %>
-    </li>
-      <% end %>
-
-  <% @soups.each do |soup| %>
-    <li>
-      <%= soup.name %>
-    </li>
-      <% end %>
-
+    </ul>
+<br>
+<h2>Vegetables</h2>
+<ul class="checkbox-list">
   <% @vegetables.each do |vegetable| %>
     <li>
-      <%= vegetable.name %>
+  <%= check_box_tag vegetable.name =%> <%= vegetable.name %>
     </li>
-  <% end %>
+      <% end %>
+    </ul>
+<br>
+<h2>Condiments</h2>
+<ul class="checkbox-list">  
+  <% @condiments.each do |condiment| %>
+    <li>
+   <%= check_box_tag condiment.name =%> <%= condiment.name %>
+    </li>
+      <% end %>
+    </ul>
+<br>
+<h2>Flatizzas</h2>
+<ul class="checkbox-list">
+  <% @flatizzas.each do |flatizza| %>
+    <li>
+  <%= check_box_tag flatizza.name =%> <%= flatizza.name %>
+    </li>
+      <% end %>
+    </ul>
+<br>
+<h2>Salads</h2>
+<ul class="checkbox-list">
+  <% @salads.each do |salad| %>
+    <li>
+  <%= check_box_tag salad.name =%> <%= salad.name %>
+    </li>
+      <% end %>
+    </ul>
+<br>
+<h2>Salad Dressings</h2>
+<ul class="checkbox-list">
+  <% @salad_dressings.each do |salad_dressing| %>
+    <li>
+  <%= check_box_tag salad_dressing.name =%> <%= salad_dressing.name %>
+    </li>
+      <% end %>
+    </ul>
+<br>
+<h2>Soups</h2>
+<ul class="checkbox-list">
+  <% @soups.each do |soup| %>
+    <li>
+  <%= check_box_tag soup.name =%> <%= soup.name %>
+    </li>
+      <% end %>
+    </ul>
+<br>
+<h2>Breakfasts</h2>
+<ul class="checkbox-list">
+  <% @breakfasts.each do |breakfast| %>
+    <li>
+  <%= check_box_tag breakfast.name =%> <%= breakfast.name %>
+    </li>
+      <% end %>
+    </ul>
+<br>
+<h2>Desserts</h2>
+<ul class="checkbox-list">
+  <% @desserts.each do |dessert| %>
+    <li>
+  <%= check_box_tag dessert.name =%> <%= dessert.name %>
+    </li>
+      <% end %>
+    </ul>
+<br>
+<h2>Beverages</h2>
+<ul class="checkbox-list">
+  <% @beverages.each do |beverage| %>
+    <li>
+  <%= check_box_tag beverage.name =%> <%= beverage.name %>
+    </li>
+      <% end %>
 </ul>

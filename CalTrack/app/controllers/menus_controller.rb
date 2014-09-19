@@ -1,17 +1,17 @@
 class MenusController < ApplicationController
   def index
     @menus = Menu.all
-    @sandwiches = Sandwich.all
-    @beverages = Beverage.all
     @breads = Bread.all
-    @breakfasts = Breakfast.all
+    @sandwiches = Sandwich.all
+    @vegetables = Vegetable.all
     @condiments = Condiment.all
-    @desserts = Dessert.all
     @flatizzas = Flatizza.all
     @salads = Salad.all
     @salad_dressings = Salad_Dressing.all
     @soups = Soup.all
-    @vegetables = Vegetable.all
+    @breakfasts = Breakfast.all
+    @desserts = Dessert.all
+    @beverages = Beverage.all
   end
 
   def new
@@ -49,4 +49,12 @@ class MenusController < ApplicationController
     @menu.destroy
     redirect_to root_path
   end
+
+  def calculate
+    @menu 
+  end
+
+
+
 end
+

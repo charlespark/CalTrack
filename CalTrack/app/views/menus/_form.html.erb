@@ -1,0 +1,6 @@
+<%= form_for @bread do |b| %>
+
+  <%= b.collection_check_boxes(:breads, Bread.all, :name, :title) %>
+
+  <%= m.submit %>
+  <% end %>

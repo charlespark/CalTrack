@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/signup' =>  'users#new', as: :signup
 
   root 'menus#index'
+
   get '/login' => 'sessions#new', as: :sessions
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy', as: :log_out
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
   # SUBWAY MENU RESOURCE
   get 'menu/' => 'menus#index'
   
+  get 'menu/calculate' => 'menus#calculate', as: :calculate
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
