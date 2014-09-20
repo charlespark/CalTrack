@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   
   get 'menu/calculate' => 'menus#calculate', as: :calculate
 
-
+  post 'menu/calculate' => 'menus#calculate'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

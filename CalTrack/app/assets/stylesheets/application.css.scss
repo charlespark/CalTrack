@@ -20,10 +20,27 @@ h1 {
 	text-align: center;
 }
 
+/*#menu-form .food-item {
+  display: block;
+  vertical-align: -1px;
+  margin: 5px;
+ }*/
 
+#menu-form input {
 
+}
 
-m.button {
+#menu-form label, {
+  display: block;
+ }
+
+/*#menu-form input .collection_check_boxes{
+  display: inline;
+  vertical-align: -5px;
+ }
+*/
+
+#menu-form button {
   font-size: 0.9rem;
   display: inline-block;
   border: 1px solid silver;
@@ -37,7 +54,9 @@ m.button {
   margin-right: 0.618rem;
 }
 
-
+ul li {
+	list-style-type:none
+}
 
  .header
 {    
@@ -55,3 +74,11 @@ m.button {
    width:100%;
    /* the rest of your css... */
 }
+
+/*label {
+	float: left;
+}
+
+input {
+	float: left;
+}*/

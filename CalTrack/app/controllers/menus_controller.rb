@@ -19,7 +19,7 @@ class MenusController < ApplicationController
   end
 
   def create
-    @menu = Menu.new(params.require(:menu).permit(:title, :actor_ids => []))
+    @menu = Menu.new(params.require(:menu).permit(:breads => []))
     if @menu.save
       redirect_to @menu
     else
@@ -51,7 +51,7 @@ class MenusController < ApplicationController
   end
 
   def calculate
-    @menu 
+  #   render 'new'
   end
 
 
