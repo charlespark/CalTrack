@@ -20,7 +20,17 @@ class MenusController < ApplicationController
 
   def create
     @menu = Menu.new(params.require(:menu).permit(:breads => []))
-    if @menu.save
+    @menu = Menu.new(params.require(:menu).permit(:sandwiches => []))
+    @menu = Menu.new(params.require(:menu).permit(:vegetables => []))
+    @menu = Menu.new(params.require(:menu).permit(:condiments => []))
+    @menu = Menu.new(params.require(:menu).permit(:flatizzas => []))
+    @menu = Menu.new(params.require(:menu).permit(:salads => []))
+    @menu = Menu.new(params.require(:menu).permit(:salad_dressings => []))
+    @menu = Menu.new(params.require(:menu).permit(:soups => []))
+    @menu = Menu.new(params.require(:menu).permit(:breakfasts => []))
+    @menu = Menu.new(params.require(:menu).permit(:desserts => []))
+    @menu = Menu.new(params.require(:menu).permit(:beverages => []))
+   if @menu.save
       redirect_to @menu
     else
       render 'new'
@@ -37,7 +47,7 @@ class MenusController < ApplicationController
 
   def update
     @menu = Menu.find(params[:id])
-    if @menu.update_attributes(params.require(:menu).permit(:title, :actor_ids => []))
+    if @menu.update_attributes(params.require(:menu).permit(:title, :breads => []))
       redirect_to @menu
     else
       render 'edit'
@@ -51,10 +61,34 @@ class MenusController < ApplicationController
   end
 
   def calculate
-  #   render 'new'
+    # bread = params[:bread_ids]
+    @bread = Bread.find(params[:name])
+    # sandwich = params[:sandwich]
+    # vegetable = params[:vegetable]
+    # condiment = params[:condiment]
+    # flatizza = params[:flatizza]   
+    # salad = params[:salad]
+    # salad_dressing = params[:salad_dressing]
+    # soup = params[:soup]
+    # breakfast = params[:breakfast]
+    # dessert = params[:dessert]
+    # beverage = params[:beverage]
+    # @result = bread.to_i +  sandwich.to_i
+    # render 'result'
+    # @menu = Menu.find(params[:id])
+
+    # Menu.find(params.require(:menu).permit(:title, :breads => []))
+    # @menu = Menu.find(params.require(:menu).permit(:sandwiches => []))
+    # @menu = Menu.find(params.require(:menu).permit(:vegetables => []))
+    # @menu = Menu.find(params.require(:menu).permit(:condiments => []))
+    # @menu = Menu.find(params.require(:menu).permit(:flatizzas => []))
+    # @menu = Menu.find(params.require(:menu).permit(:salads => []))
+    # @menu = Menu.find(params.require(:menu).permit(:salad_dressings => []))
+    # @menu = Menu.find(params.require(:menu).permit(:soups => []))
+    # @menu = Menu.find(params.require(:menu).permit(:breakfasts => []))
+    # @menu = Menu.find(params.require(:menu).permit(:desserts => []))
+    # @menu = Menu.find(params.require(:menu).permit(:beverages => []))
+    # else
+    # render 'new'
+    end
   end
-
-
-
-end
-

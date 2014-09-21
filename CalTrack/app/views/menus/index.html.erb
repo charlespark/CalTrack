@@ -22,11 +22,8 @@
 
 <h2>Sandwiches</h2>
 <h4>Select your sandwich</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @sandwiches.each do |sandwich| %>
+<ul>
     <li>
-  <%#= check_box_tag sandwich.name %> <%#= sandwich.name %>
-
    <%= m.collection_radio_buttons(:sandwich_ids, Sandwich.all, :id, :name) do |s| s.label { s.radio_button + s.text } 
       end %>
   </li>
@@ -34,10 +31,8 @@
 
 <h2>Vegetables</h2>
 <h4>Select your vegetables</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @vegetables.each do |vegetable| %>
+<ul>
     <li>
-  <%#= check_box_tag vegetable.name %> <%#= vegetable.name %>
    <%= m.collection_check_boxes(:vegetable_ids, Vegetable.all, :id, :name) do |v| v.label { v.check_box + v.text } 
       end %>
     </li>
@@ -45,10 +40,8 @@
 
 <h2>Condiments</h2>
 <h4>Select your condiments</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @condiments.each do |condiment| %>
+<ul>
     <li>
-   <%#= check_box_tag condiment.name %> <%#= condiment.name %>
    <%= m.collection_check_boxes(:condiment_ids, Condiment.all, :id, :name) do |c| c.label { c.check_box + c.text } 
       end %>
     </li>
@@ -56,32 +49,26 @@
 
 <h2>Flatizzas</h2>
 <h4>Select your Flatizza</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @flatizzas.each do |flatizza| %>
+<ul>
     <li>
-  <%#= check_box_tag flatizza.name %> <%#= flatizza.name %>
-   <%= m.collection_check_boxes(:flatizza_ids, Flatizza.all, :id, :name) do |f| f.label { f.check_box + f.text } 
+   <%= m.collection_radio_buttons(:flatizza_ids, Flatizza.all, :id, :name) do |f| f.label { f.radio_button + f.text } 
       end %>
     </li>
     </ul>
 
 <h2>Salads</h2>
 <h4>Select your salad</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @salads.each do |salad| %>
+<ul>
     <li>
-  <%#= check_box_tag salad.name %> <%#= salad.name %>
-   <%= m.collection_check_boxes(:salad_ids, Salad.all, :id, :name) do |s| s.label { s.check_box + s.text } 
+   <%= m.collection_radio_buttons(:salad_ids, Salad.all, :id, :name) do |s| s.label { s.radio_button + s.text } 
       end %>
     </li>
     </ul>
 
 <h2>Salad Dressings</h2>
 <h4>Select your salad dressing</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @salad_dressings.each do |salad_dressing| %>
+<ul>
     <li>
-  <%#= check_box_tag salad_dressing.name %> <%#= salad_dressing.name %>
    <%= m.collection_check_boxes(:salad_dressing_ids, Salad_Dressing.all, :id, :name) do |s| s.label { s.check_box + s.text } 
       end %>
     </li>
@@ -89,10 +76,8 @@
 
 <h2>Soups</h2>
 <h4>Select your soup</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @soups.each do |soup| %>
+<ul>
     <li>
-  <%#= check_box_tag soup.name %> <%#= soup.name %>
    <%= m.collection_check_boxes(:soup_ids, Soup.all, :id, :name) do |s| s.label { s.check_box + s.text } 
       end %>
     </li>
@@ -100,21 +85,17 @@
 
 <h2>Breakfasts</h2>
 <h4>Select your breakfast</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @breakfasts.each do |breakfast| %>
+<ul>
     <li>
-  <%#= check_box_tag breakfast.name %> <%#= breakfast.name %>
-   <%= m.collection_check_boxes(:breakfast_ids, Breakfast.all, :id, :name) do |b| b.label { b.check_box + b.text } 
+   <%= m.collection_radio_buttons(:breakfast_ids, Breakfast.all, :id, :name) do |b| b.label { b.radio_button + b.text } 
       end %>
     </li>
     </ul>
 
 <h2>Desserts</h2>
 <h4>Select your dessert</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @desserts.each do |dessert| %>
+<ul>
     <li>
-  <%#= check_box_tag dessert.name %> <%#= dessert.name %>
    <%= m.collection_check_boxes(:dessert_ids, Dessert.all, :id, :name) do |d| d.label { d.check_box + d.text } 
       end %>
     </li>
@@ -122,10 +103,8 @@
 
 <h2>Beverages</h2>
 <h4>Select your beverage</h4>
-<ul> <!-- class="checkbox-list"> -->
-  <%# @beverages.each do |beverage| %>
+<ul>
     <li>
-  <%#= check_box_tag beverage.name %> <%#= beverage.name %>
    <%= m.collection_check_boxes(:beverage_ids, Beverage.all, :id, :name) do |b| b.label { b.check_box + b.text } 
       end %>
     </li>
