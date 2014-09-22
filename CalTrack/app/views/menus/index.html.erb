@@ -12,7 +12,7 @@
   <%# @breads.each do |bread| %>
 
   <%#= check_box_tag bread.name %> <%#= bread.name %> 
-<%= form_for :menu, url: calculate_path do |m| %>
+<%= form_for @menu, url: calculate_path do |m| %>
  <li>
   <%= m.collection_radio_buttons(:bread_ids, Bread.all, :id, :name) do |b|
         b.label { b.radio_button + b.text } 
@@ -69,7 +69,7 @@
 <h4>Select your salad dressing</h4>
 <ul>
     <li>
-   <%= m.collection_check_boxes(:salad_dressing_ids, Salad_Dressing.all, :id, :name) do |s| s.label { s.check_box + s.text } 
+   <%= m.collection_check_boxes(:salad_dressing_ids, SaladDressing.all, :id, :name) do |s| s.label { s.check_box + s.text } 
       end %>
     </li>
     </ul>
@@ -112,5 +112,5 @@
 </div>
 
 <br>
-<%= m.submit %>
+<%= m.submit "Calculate" %>
 <% end %>

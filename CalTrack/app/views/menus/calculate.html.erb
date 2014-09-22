@@ -1,10 +1,13 @@
 <p> testing </p>
 <p> this page will show the calcuation of the checkboxes the user checked on the localhost:3000/menu page.</p>
 
+<ul>
+<% @menu.breads.each do |bread| %>
+<%= bread.id %>
+<% end %>
+<%#= @bread=Bread.find_by(id: @menu.bread_ids) %>
+ </ul>
 
-<div>
-</div>
-
-<%= link_to "Back to menu", root_path %>
+<%= link_to "Back to menu", menu_path %>
 
 <%= debug(params) %>

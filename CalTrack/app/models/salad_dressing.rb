@@ -1,4 +1,4 @@
-class Salad_Dressing
+class SaladDressing
 include Mongoid::Document
 field :name, type: String
 field :serving_size, type: Float
