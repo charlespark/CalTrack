@@ -81,7 +81,7 @@ class MenusController < ApplicationController
     # @menu = Menu.new(params.require(:menu).permit(:saladDressing_ids => []))
     # @menu = Menu.new(params.require(:menu).permit(:soup_ids => []))
     @menu = Menu.new(params.require(:menu).permit(:breakfast_ids => []))
-    @menu = Menu.new(params.require(:menu).permit(:dessert_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:dessert_ids => []))
     # @menu = Menu.new(params.require(:menu).permit(:beverage_ids => []))
     @menu.save
         #else
