@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   	@user = User.new(params.require(:user).permit(:name, :email, :password))
   	if @user.save
   		# log the user in
-  		redirect_to root_path
+  		redirect_to menu_path
   	else
   		render 'new'
   	end

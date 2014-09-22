@@ -15,8 +15,11 @@ Rails.application.routes.draw do
   # SUBWAY MENU RESOURCE
   get 'menu/' => 'menus#index'
   
-  get 'menu/calculate' => 'menus#calculate', as: :calculate
+  get 'menu/calculate' => 'menus#calculate'
   post 'menu/calculate' => 'menus#calculate'
+
+  # patch 'menu/:id' => 'menus#calculate', as: :calculate
+  patch 'menu/' => 'menus#calculate', as: :calculate
 
   # get 'menu/result' => 'menus#result', as: :result
   # post 'menu/result' => 'menus#result'
