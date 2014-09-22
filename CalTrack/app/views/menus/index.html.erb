@@ -1,8 +1,11 @@
+<!-- As the View for the Menu page, this page display the checklist of all menu items and sets up the framework of what to expect from the site.
+Each food category is broken down and has either a radio button (for single-item selections per category (i.e. bread) or multiple-item selections (i.e. vegetables and condiments)-->
+
 <!DOCTYPE html>
 <html>
   <header>
 <%#h1><i>Subway</i></h1%>
-<p>What are you eating today?</p>
+<h3><i>What are you eating today?</i></h3>
 </header>
 
 <div id="menu-form">
@@ -12,7 +15,7 @@
   <%# @breads.each do |bread| %>
 
   <%#= check_box_tag bread.name %> <%#= bread.name %> 
-<%= form_for @menu, url: calculate_path do |m| %>
+<%= form_for @menu, url: calculate_path(:menu) do |m| %>
  <li>
   <%= m.collection_radio_buttons(:bread_ids, Bread.all, :id, :name) do |b|
         b.label { b.radio_button + b.text } 

@@ -11,7 +11,7 @@ def create
 
 	if user && user.authenticate(params[:session][:password])
 		log_in(user)
-		redirect_to root_path
+		redirect_to menu_path
 	else
 		flash[:error] ||= 'Try again.'
 		render 'new'
@@ -21,7 +21,9 @@ end
 def destroy
 
 	log_out
-	redirect_to root_path
+	redirect_to menu_path
 end
 
 end
+
+# <^^^^^ Basic log in and log out functionality>

@@ -1,9 +1,40 @@
-<p> testing </p>
 <p> this page will show the calcuation of the checkboxes the user checked on the localhost:3000/menu page.</p>
+
+<!-- When complete, this page will display the combined nutritional value for all selected items from the Menu page -->
 
 <ul>
 <% @menu.breads.each do |bread| %>
 <%= bread.id %>
+<% end %>
+<% @menu.sandwiches.each do |sandwich| %>
+<%= sandwich.id %>
+<% end %>
+<% @menu.vegetables.each do |vegetable| %>
+<%= vegetable.id %>
+<% end %>
+<% @menu.condiments.each do |condiment| %>
+<%= condiment.id %>
+<% end %>
+<% @menu.flatizzas.each do |flatizza| %>
+<%= flatizza.id %>
+<% end %>
+<% @menu.salads.each do |salad| %>
+<%= salad.id %>
+<% end %>
+<% @menu.salad_dressings.each do |salad_dressing| %>
+<%= salad_dressing.id %>
+<% end %>
+<% @menu.soups.each do |soup| %>
+<%= soup.id %>
+<% end %>
+<% @menu.breakfasts.each do |breakfast| %>
+<%= breakfast.id %>
+<% end %>
+<% @menu.desserts.each do |dessert| %>
+<%= dessert.id %>
+<% end %>
+<% @menu.beverages.each do |beverage| %>
+<%= beverage.id %>
 <% end %>
 <%#= @bread=Bread.find_by(id: @menu.bread_ids) %>
  </ul>

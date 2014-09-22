@@ -13,34 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+/* ^^^^^Implementing Bootstrap elements */
 
 h1 {
 	text-align: center;
 }
+/* ^^^^^This is here for future reference and use (i.e. logo/title) */
 
 /*#menu-form .food-item {
   display: block;
   vertical-align: -1px;
   margin: 5px;
  }*/
+/* ^^^^^Was experimenting with how to align the checkboxes */
 
 #menu-form input {
-
 }
+/* ^^^^^This is here for the checkboxes as well, though it currently serves no function */
 
 #menu-form label, {
   display: block;
  }
+/* ^^^^^Another checkbox formatting command */
 
 /*#menu-form input .collection_check_boxes{
   display: inline;
   vertical-align: -5px;
  }
 */
+/* ^^^^^Another checkbox formatting command */
 
-#menu-form button {
+/*#menu-form button {
   font-size: 0.9rem;
   display: inline-block;
   border: 1px solid silver;
@@ -52,11 +58,13 @@ h1 {
   border-radius: 3px;
   margin-top: 1.618rem;
   margin-right: 0.618rem;
-}
+}*/
+/* ^^^^^Currently not in use, this is for any buttons I may need in the future */
 
 ul li {
 	list-style-type:none
 }
+/* ^^^^^This removed the pesky bulletpoints from my list of radio buttons and checkboxes */
 
  .header {    
    width:1004px;
@@ -67,10 +75,11 @@ ul li {
    background-image:url(images/Subway_logo.svg);
    background-repeat:no-repeat;
 }
+/* ^^^^^Another item for future use in styling and formatting */
 
 .headerBlank {
    width:100%;
-   /* the rest of your css... */
+/* ^^^^^Another item for future use in styling and formatting */
 }
 
   input[type=submit] {
@@ -87,6 +96,7 @@ ul li {
     display: block;
     cursor: pointer;
   }
+/* ^^^^^Formatting the submit and registration buttons in the program */
 
 /*label {
 	float: left;
@@ -95,3 +105,4 @@ ul li {
 input {
 	float: left;
 }*/
+/* ^^^^^Some last tools to try to format the checkbox and radio button appearance */

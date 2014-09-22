@@ -1,3 +1,5 @@
+# Any and all Ruby gems are placed here and activated via the "bundle install" command in the Terminal window
+
 source 'https://rubygems.org'
 
 

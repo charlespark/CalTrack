@@ -18,3 +18,16 @@ Once the user selects a menu offering, the information will populate on the side
 
 The collected nutritional information will appear in the form of the FDA Nutritional Label and show the values in comparison to an average 2,000 calorie a day diet.
 
+
+
+
+
+Use a form_for OR a form_tag and put all menu items inside, so that when clicked, the corresponding nutritional value is 
+
+
+
+
+
+
+
+

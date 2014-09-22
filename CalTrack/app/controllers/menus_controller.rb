@@ -13,10 +13,12 @@ class MenusController < ApplicationController
     @desserts = Dessert.all
     @beverages = Beverage.all
   end
-
+# ^^^^^Adding in all the components that are part of the creation of a meal in this program
+  
   def new
     @menu = Menu.new
   end
+# ^^^^^The new Menu page
 
   def create
     # @menu = Menu.new(params.require(:menu).permit(:breads => []))
@@ -36,14 +38,17 @@ class MenusController < ApplicationController
       render 'new'
     end
   end
+# ^^^^^The main create duties are handled by "Calculate", below.
 
   def show
     @menu = Menu.find(params[:id])
   end
+# ^^^^^Some basic controls for future paths 
 
   def edit
     @menu = Menu.find(params[:id])
   end
+# ^^^^^Some basic controls for future paths
 
   def update
     @menu = Menu.find(params[:id])
@@ -53,35 +58,35 @@ class MenusController < ApplicationController
       render 'edit'
     end
   end
+# ^^^^^Some basic controls for future paths
 
   def destroy
     @menu = Menu.find(params[:id])
     @menu.destroy
-    redirect_to root_path
+    redirect_to menu_path
   end
+# ^^^^^Some basic controls for future paths
 
   def calculate
-    # bread = params[:bread_ids]
-    # @bread = Bread.find(params[:name])
-    # sandwich = params[:sandwich]
-    # vegetable = params[:vegetable]
-    # condiment = params[:condiment]
-    # flatizza = params[:flatizza]   
-    # salad = params[:salad]
-    # salad_dressing = params[:salad_dressing]  
-    # soup = params[:soup]
-    # breakfast = params[:breakfast]
-    # dessert = params[:dessert]
-    # beverage = params[:beverage]
-    # @result = bread.to_i +  sandwich.to_i
-    # render 'result'
-    # @menu = Menu.find(params[:id])
-
     # Menu.find(params.require(:menu).permit(:title, :breads => []))
-    @menu = Menu.find(params[:id])
-    @menu.update_attributes(params.require(:menu).permit(:bread_ids => []))
+    # @menu = Menu.new(params[:id])
+    # @menu.update_attributes(params.require(:menu).permit(:bread_ids => []))
+
+    @menu = Menu.new(params.require(:menu).permit(:bread_ids => []))
+    @menu = Menu.new(params.require(:menu).permit(:sandwich_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:vegetable_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:condiment_ids => []))
+    @menu = Menu.new(params.require(:menu).permit(:flatizza_ids => []))
+    @menu = Menu.new(params.require(:menu).permit(:salad_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:saladDressing_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:soup_ids => []))
+    @menu = Menu.new(params.require(:menu).permit(:breakfast_ids => []))
+    @menu = Menu.new(params.require(:menu).permit(:dessert_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:beverage_ids => []))
     @menu.save
-        # else
-    # render 'new'
+        #else
+    #render 'new'
     end
   end
+  # ^^^^^ Where the calculation (is supposed to) happen.  Though the individual food items ids are passed to the Calculate page, they do not individually display, which is a source of great frustration.
+  # ^^^^^ For some reason, the '@menu.save' command in line 86 does not play nice when a food category that is noted by checkboxes (vegetables, condiments, salad dressing, soup, dessert and beverage are active in the above, as it breaks the page, leaving the error message NameError in MenusController#calculate - uninitialized constant Name

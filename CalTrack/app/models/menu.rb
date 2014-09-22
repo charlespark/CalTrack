@@ -13,3 +13,5 @@ class Menu
   has_many :desserts
   has_many :beverages
 end
+
+#Creation of the class "Menu" which serves as the parent for all food categories (bread, sandwich, vegetable, etc.)

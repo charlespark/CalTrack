@@ -41,3 +41,5 @@ module SessionsHelper
     	@current_user = user
     end
 end
+
+# <^^^^^ Along with the sessions Controller, the above commands drive the log in/log out behavior>

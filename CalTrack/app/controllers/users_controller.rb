@@ -13,3 +13,5 @@ class UsersController < ApplicationController
   	end
   end
 end
+
+# <^^^^^ Basic user registration and log in/log out functionality>

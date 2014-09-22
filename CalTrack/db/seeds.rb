@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# All of the food-specific nutritional information is stored here and was uploaded to genghis, where it currently resides (after a rake db:seed command)
+
 Bread.destroy_all
 Sandwich.destroy_all
 Vegetable.destroy_all

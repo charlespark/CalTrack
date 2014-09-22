@@ -1,5 +1,8 @@
+# This page shows which pages and processes lead to which subsequent page and/or processes
+
 Rails.application.routes.draw do
   get 'sessions/new'
+  get 'sessions/index'
 
   get '/signup' =>  'users#new', as: :signup
 
@@ -14,12 +17,13 @@ Rails.application.routes.draw do
   
   # SUBWAY MENU RESOURCE
   get 'menu/' => 'menus#index'
+  get 'menus/new' => 'menus#new'
   
-  get 'menu/calculate' => 'menus#calculate'
-  post 'menu/calculate' => 'menus#calculate'
+  # get 'menu/calculate' => 'menus#calculate'
+  post 'menu/calculate' => 'menus#calculate', as: :calculate
 
   # patch 'menu/:id' => 'menus#calculate', as: :calculate
-  patch 'menu/' => 'menus#calculate', as: :calculate
+  # patch 'menu/' => 'menus#calculate', as: :calculate
 
   # get 'menu/result' => 'menus#result', as: :result
   # post 'menu/result' => 'menus#result'

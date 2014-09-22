@@ -23,3 +23,5 @@ def authenticate(test_password)
 	end
 
 end
+
+#Basic user log in set up and framework

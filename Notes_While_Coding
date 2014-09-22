@@ -1,0 +1,23 @@
+for bread, have an option or drop-down
+
+Convert all categories to follow bread template.
+
+- Do a 'find' on (i.e. bread.find) in order to communicate all fields for each selected item, in order to calculate.
+
+
+- 
+Could be simplified if instead of a class for each category, there was one category and they are all listed within.
+
+
+Create a new class Food that has all the categories within (bread, sandwiches
+Food.all.'sort' sort is not the actual term.
+
+Can be displayed by category.
+
+
+food.find
+when collecting IDs
+
+food.find_by, category bread
+do this for each group, and render it differently in the HTML.
+
