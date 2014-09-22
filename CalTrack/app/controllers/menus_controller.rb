@@ -62,7 +62,7 @@ class MenusController < ApplicationController
 
   def calculate
     # bread = params[:bread_ids]
-    @bread = Bread.find(params[:name])
+    # @bread = Bread.find(params[:name])
     # sandwich = params[:sandwich]
     # vegetable = params[:vegetable]
     # condiment = params[:condiment]

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/signup' =>  'users#new', as: :signup
 
-  root 'menus#index'
+  root 'menus#index' as: :menu
 
   get '/login' => 'sessions#new', as: :sessions
   post '/login' => 'sessions#create'
