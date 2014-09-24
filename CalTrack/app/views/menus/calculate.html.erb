@@ -1,8 +1,13 @@
 <p> this page will show the calcuation of the checkboxes the user checked on the localhost:3000/menu page.</p>
 
 <!-- When complete, this page will display the combined nutritional value for all selected items from the Menu page -->
+<%= @bread.calories %>
 
 <ul>
+<% @menu.breads.each do |bread| %>
+<%= bread.id %>
+<% end %>
+
 <% @menu.breads.each do |bread| %>
 <%= bread.id %>
 <% end %>

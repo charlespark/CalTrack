@@ -72,18 +72,17 @@ class MenusController < ApplicationController
     # @menu = Menu.new(params[:id])
     # @menu.update_attributes(params.require(:menu).permit(:bread_ids => []))
 
-    @menu = Menu.new(params.require(:menu).permit(:bread_ids => []))
-    @menu = Menu.new(params.require(:menu).permit(:sandwich_ids => []))
-    # @menu = Menu.new(params.require(:menu).permit(:vegetable_ids => []))
+      # raise params
+    @bread = Bread.find(params.require(:menu).permit(:bread_ids => [])).first
     # @menu = Menu.new(params.require(:menu).permit(:condiment_ids => []))
-    @menu = Menu.new(params.require(:menu).permit(:flatizza_ids => []))
-    @menu = Menu.new(params.require(:menu).permit(:salad_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:flatizza_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:salad_ids => []))
     # @menu = Menu.new(params.require(:menu).permit(:saladDressing_ids => []))
     # @menu = Menu.new(params.require(:menu).permit(:soup_ids => []))
-    @menu = Menu.new(params.require(:menu).permit(:breakfast_ids => []))
+    # @menu = Menu.new(params.require(:menu).permit(:breakfast_ids => []))
     # @menu = Menu.new(params.require(:menu).permit(:dessert_ids => []))
     # @menu = Menu.new(params.require(:menu).permit(:beverage_ids => []))
-    @menu.save
+    # @menu.save
         #else
     #render 'new'
     end
