@@ -2,16 +2,26 @@ class Bread
 include Mongoid::Document
 field :name, type: String
 field :serving_size, type: Float
-field :calories, type: Float
+field :calorie, type: Float
+
+=begin
 field :calories_from_fat, type: Float
+=end
+
 field :total_fat, type: Float
 field :saturated_fat, type: Float
 field :trans_fat, type: Float
 field :cholesterol, type: Float
 field :sodium, type: Float
+
+=begin
 field :carbohydrates, type: Float
+=end
 field :dietary_fiber, type: Float
+
+=begin
 field :sugars, type: Float
+=end
 field :protein, type: Float
 field :vitamin_a, type: Float
 field :vitamin_c, type: Float

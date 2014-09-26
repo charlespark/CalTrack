@@ -1,8 +1,43 @@
 <p> this page will show the calcuation of the checkboxes the user checked on the localhost:3000/menu page.</p>
 
 <!-- When complete, this page will display the combined nutritional value for all selected items from the Menu page -->
-<%= @bread.calories %>
-
+<%= @bread.name if @bread %>
+<%= @bread.serving_size if @bread %>
+<%= @bread.calorie if @bread %>
+<%#= @bread.calories_from_fat %>
+<%= @bread.total_fat if @bread  %>
+<%= @bread.saturated_fat if @bread  %>
+<%= @bread.trans_fat if @bread  %>
+<%= @bread.cholesterol if @bread  %>
+<%= @bread.sodium if @bread  %>
+<%#= @bread.carbohydrates %>
+<%= @bread.dietary_fiber if @bread  %>
+<%#= @bread.sugars %>
+<%= @bread.protein if @bread  %>
+<%= @bread.vitamin_a if @bread  %>
+<%= @bread.vitamin_c if @bread  %>
+<%= @bread.calcium if @bread  %>
+<%= @bread.iron if @bread  %>
+<br>
+<%= @sandwich.name if @sandwich  %>
+<%= @sandwich.serving_size if @sandwich %>
+<%#= @sandwich.calories %>
+<%#= @sandwich.calories_from_fat %>
+<%= @sandwich.total_fat if @sandwich %>
+<%= @sandwich.saturated_fat if @sandwich %>
+<%= @sandwich.trans_fat if @sandwich %>
+<%= @sandwich.cholesterol if @sandwich %>
+<%= @sandwich.sodium if @sandwich %>
+<%#= @sandwich.carbohydrates %>
+<%= @sandwich.dietary_fiber if @sandwich %>
+<%#= @sandwich.sugars %>
+<%= @sandwich.protein if @sandwich %>
+<%= @sandwich.vitamin_a if @sandwich %>
+<%= @sandwich.vitamin_c if @sandwich %>
+<%= @sandwich.calcium if @sandwich %>
+<%= @sandwich.iron if @sandwich %>
+<%
+=begin
 <ul>
 <% @menu.breads.each do |bread| %>
 <%= bread.id %>
@@ -43,7 +78,8 @@
 <% end %>
 <%#= @bread=Bread.find_by(id: @menu.bread_ids) %>
  </ul>
-
+<%
+=end %>
 <%= link_to "Back to menu", menu_path %>
 
 <%= debug(params) %>

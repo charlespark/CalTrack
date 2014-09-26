@@ -73,7 +73,10 @@ class MenusController < ApplicationController
     # @menu.update_attributes(params.require(:menu).permit(:bread_ids => []))
 
       # raise params
-    @bread = Bread.find(params.require(:menu).permit(:bread_ids => [])).first
+    @bread = Bread.find(params[:menu][:bread_ids]) if (params[:menu][:bread_ids])
+
+    @sandwich = Sandwich.find(params[:menu][:sandwich_ids]) if (params[:menu][:sandwich_ids])
+
     # @menu = Menu.new(params.require(:menu).permit(:condiment_ids => []))
     # @menu = Menu.new(params.require(:menu).permit(:flatizza_ids => []))
     # @menu = Menu.new(params.require(:menu).permit(:salad_ids => []))
