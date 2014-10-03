@@ -6,13 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# All of the food-specific nutritional information is stored here and was uploaded to genghis, where it currently resides (after a rake db:seed command)
+
 Bread.destroy_all
 Sandwich.destroy_all
 Vegetable.destroy_all
 Condiment.destroy_all
 Flatizza.destroy_all
 Salad.destroy_all
-SaladDressing.destroy_all
+Salad_Dressing.destroy_all
 Soup.destroy_all
 Breakfast.destroy_all
 Dessert.destroy_all
@@ -499,7 +501,7 @@ sandwiches = Sandwich.create([
 	# },
 	{
 		name: "6 inch B.L.T.",
-		serving_size: 0,
+		serving_size: -9,
 		calories: 105,
 		calories_from_fat: 60,
 		total_fat: 7,
@@ -512,7 +514,7 @@ sandwiches = Sandwich.create([
 		sugars: 0,
 		protein: 7,
 		vitamin_a: 2,
-		vitamin_c: 0,
+		vitamin_c: -10,
 		calcium: 0,
 		iron: 0
 	},
@@ -2069,7 +2071,7 @@ salads = Salad.create([
 	}
 ]);
 
-salad_dressings = SaladDressing.create([
+salad_dressings = Salad_Dressing.create([
 	{
 		name: "Fat Free Italian 2 oz",
 		serving_size: 57,

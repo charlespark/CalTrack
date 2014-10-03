@@ -1,0 +1,15 @@
+Charless-MacBook-Air:CalTrack charlespark$ rake db:seed --trace
+
+/Users/charlespark/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/bundler-1.6.5/lib/bundler.rb:301: warning: Insecure world writable dir /usr/local/Cellar/rbenv/0.4.0/libexec in PATH, mode 040777
+
+** Invoke db:seed (first_time)
+
+** Invoke environment (first_time)
+
+** Execute environment
+
+** Execute db:seed
+
+rake aborted!
+
+NameError: uninitialized constant Calory

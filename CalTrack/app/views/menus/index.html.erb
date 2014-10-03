@@ -4,9 +4,9 @@ Each food category is broken down and has either a radio button (for single-item
 <!DOCTYPE html>
 <html>
   <header>
-<%#h1><i>Subway</i></h1%>
-<h3><i>What are you eating today?</i></h3>
-</header>
+    <h1>Subway</h1>
+    <h3><i>What are you eating today?</i></h3>
+  </header>
 
 <div id="menu-form">
 <h2>Bread</h2>
@@ -18,7 +18,7 @@ Each food category is broken down and has either a radio button (for single-item
 <%= form_for @menu, url: calculate_path(:menu) do |m| %>
  <li>
   <%= m.collection_radio_buttons(:bread_ids, Bread.all, :id, :name) do |b|
-        b.label { b.radio_button + b.text } 
+    b.label { b.radio_button + b.text } 
       end %>
   </li>
 </ul>
@@ -27,7 +27,8 @@ Each food category is broken down and has either a radio button (for single-item
 <h4>Select your sandwich</h4>
 <ul>
     <li>
-   <%= m.collection_radio_buttons(:sandwich_ids, Sandwich.all, :id, :name) do |s| s.label { s.radio_button + s.text } 
+   <%= m.collection_radio_buttons(:sandwich_ids, Sandwich.all, :id, :name) do |s|
+    s.label { s.radio_button + s.text } 
       end %>
   </li>
 </ul>
@@ -36,34 +37,38 @@ Each food category is broken down and has either a radio button (for single-item
 <h4>Select your vegetables</h4>
 <ul>
     <li>
-   <%= m.collection_check_boxes(:vegetable_ids, Vegetable.all, :id, :name) do |v| v.label { v.check_box + v.text } 
-      end %>
+  <%= m.collection_radio_buttons(:vegetable_ids, Vegetable.all, :id, :name) do |v| %>
+       <%= v.label { v.radio_button + v.text } %>
+      <% end %>
     </li>
-    </ul>
+</ul>
 
 <h2>Condiments</h2>
 <h4>Select your condiments</h4>
 <ul>
     <li>
-   <%= m.collection_check_boxes(:condiment_ids, Condiment.all, :id, :name) do |c| c.label { c.check_box + c.text } 
+   <%= m.collection_radio_buttons(:condiment_ids, Condiment.all, :id, :name) do |c|
+    c.label { c.radio_button + c.text } 
       end %>
     </li>
-    </ul>
+</ul>
 
 <h2>Flatizzas</h2>
 <h4>Select your Flatizza</h4>
 <ul>
     <li>
-   <%= m.collection_radio_buttons(:flatizza_ids, Flatizza.all, :id, :name) do |f| f.label { f.radio_button + f.text } 
+   <%= m.collection_radio_buttons(:flatizza_ids, Flatizza.all, :id, :name) do |f|
+    f.label { f.radio_button + f.text } 
       end %>
     </li>
-    </ul>
+</ul>
 
 <h2>Salads</h2>
 <h4>Select your salad</h4>
 <ul>
     <li>
-   <%= m.collection_radio_buttons(:salad_ids, Salad.all, :id, :name) do |s| s.label { s.radio_button + s.text } 
+   <%= m.collection_radio_buttons(:salad_ids, Salad.all, :id, :name) do |s|
+    s.label { s.radio_button + s.text } 
       end %>
     </li>
     </ul>
@@ -72,7 +77,7 @@ Each food category is broken down and has either a radio button (for single-item
 <h4>Select your salad dressing</h4>
 <ul>
     <li>
-   <%= m.collection_check_boxes(:salad_dressing_ids, SaladDressing.all, :id, :name) do |s| s.label { s.check_box + s.text } 
+   <%= m.collection_radio_buttons(:salad_dressing_ids, SaladDressing.all, :id, :name) do |s| s.label { s.radio_button+ s.text } 
       end %>
     </li>
     </ul>
@@ -81,7 +86,7 @@ Each food category is broken down and has either a radio button (for single-item
 <h4>Select your soup</h4>
 <ul>
     <li>
-   <%= m.collection_check_boxes(:soup_ids, Soup.all, :id, :name) do |s| s.label { s.check_box + s.text } 
+   <%= m.collection_radio_buttons(:soup_ids, Soup.all, :id, :name) do |s| s.label { s.radio_button + s.text } 
       end %>
     </li>
     </ul>
@@ -99,7 +104,7 @@ Each food category is broken down and has either a radio button (for single-item
 <h4>Select your dessert</h4>
 <ul>
     <li>
-   <%= m.collection_check_boxes(:dessert_ids, Dessert.all, :id, :name) do |d| d.label { d.check_box + d.text } 
+   <%= m.collection_radio_buttons(:dessert_ids, Dessert.all, :id, :name) do |d| d.label { d.radio_button + d.text } 
       end %>
     </li>
     </ul>
@@ -108,12 +113,11 @@ Each food category is broken down and has either a radio button (for single-item
 <h4>Select your beverage</h4>
 <ul>
     <li>
-   <%= m.collection_check_boxes(:beverage_ids, Beverage.all, :id, :name) do |b| b.label { b.check_box + b.text } 
+   <%= m.collection_radio_buttons(:beverage_ids, Beverage.all, :id, :name) do |b| b.label { b.radio_button + b.text } 
       end %>
     </li>
 </ul>
 </div>
-
-<br>
 <%= m.submit "Calculate" %>
 <% end %>
+</html>

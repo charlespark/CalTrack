@@ -20,8 +20,15 @@
 
 h1 {
 	text-align: center;
+  font-style: italic;
+  color:#FFFF00;
 }
 /* ^^^^^This is here for future reference and use (i.e. logo/title) */
+
+body {
+    background :url('restaurant.png');
+    background-repeat: repeat;
+}
 
 /*#menu-form .food-item {
   display: block;
@@ -36,6 +43,7 @@ h1 {
 
 #menu-form label, {
   display: block;
+  text-align: justify;
  }
 /* ^^^^^Another checkbox formatting command */
 
@@ -72,15 +80,15 @@ ul li {
    margin-left: auto;
    margin-right: auto;
    padding:0px;
-   background-image:url(images/Subway_logo.svg);
+   background :url('subway-logo.png');
    background-repeat:no-repeat;
 }
 /* ^^^^^Another item for future use in styling and formatting */
 
-.headerBlank {
+/*.headerBlank {
    width:100%;
+}*/
 /* ^^^^^Another item for future use in styling and formatting */
-}
 
   input[type=submit] {
     margin-top: 2rem;
@@ -95,6 +103,30 @@ ul li {
     letter-spacing: 2px;
     display: block;
     cursor: pointer;
+  }
+
+
+.left{
+  float:left;
+  margin-right:20px;
+  width:365px;
+  font-weight: 900;
+}
+
+.right{
+
+}
+
+  .space {
+    padding:0px;
+    margin:0px;
+  
+     li {
+      display:inline-block;
+      width:3.5%;
+/*      text-align:center;*/
+/*      padding-right:20px;*/
+    } 
   }
 /* ^^^^^Formatting the submit and registration buttons in the program */
 

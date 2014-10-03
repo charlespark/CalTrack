@@ -1,47 +1,328 @@
-<p> this page will show the calcuation of the checkboxes the user checked on the localhost:3000/menu page.</p>
-
-<!-- When complete, this page will display the combined nutritional value for all selected items from the Menu page -->
-<%= @bread.name if @bread %>
-<%= @bread.serving_size if @bread %>
-<%= @bread.calorie if @bread %>
-<%#= @bread.calories_from_fat %>
-<%= @bread.total_fat if @bread  %>
-<%= @bread.saturated_fat if @bread  %>
-<%= @bread.trans_fat if @bread  %>
-<%= @bread.cholesterol if @bread  %>
-<%= @bread.sodium if @bread  %>
-<%#= @bread.carbohydrates %>
-<%= @bread.dietary_fiber if @bread  %>
-<%#= @bread.sugars %>
-<%= @bread.protein if @bread  %>
-<%= @bread.vitamin_a if @bread  %>
-<%= @bread.vitamin_c if @bread  %>
-<%= @bread.calcium if @bread  %>
-<%= @bread.iron if @bread  %>
+<!-- This page displays the combined nutritional value for all selected items from the Menu page -->
+<h3><b>Enjoy your meal!</b></h3>
 <br>
-<%= @sandwich.name if @sandwich  %>
-<%= @sandwich.serving_size if @sandwich %>
-<%#= @sandwich.calories %>
-<%#= @sandwich.calories_from_fat %>
-<%= @sandwich.total_fat if @sandwich %>
-<%= @sandwich.saturated_fat if @sandwich %>
-<%= @sandwich.trans_fat if @sandwich %>
-<%= @sandwich.cholesterol if @sandwich %>
-<%= @sandwich.sodium if @sandwich %>
-<%#= @sandwich.carbohydrates %>
-<%= @sandwich.dietary_fiber if @sandwich %>
-<%#= @sandwich.sugars %>
-<%= @sandwich.protein if @sandwich %>
-<%= @sandwich.vitamin_a if @sandwich %>
-<%= @sandwich.vitamin_c if @sandwich %>
-<%= @sandwich.calcium if @sandwich %>
-<%= @sandwich.iron if @sandwich %>
+
+<div class="left">Your Selections</div>
+<div class="right">
+	<ul class="space">
+		<li><b>Grams</b></li>
+		<li><b>Cals</b></li>
+		<li><b>FatCal</b></li>
+		<li><b>Fat</b></li>
+		<li><b>SatFat</b></li>
+		<li><b>TransF</b></li>
+		<li><b>Choles</b></li>
+		<li><b>Sodim</b></li>
+		<li><b>Carbs</b></li>
+		<li><b>Fiber</b></li>
+		<li><b>Sugar</b></li>
+		<li><b>Protein</b></li>
+		<li><b>Vit A</b></li>
+		<li><b>Vit C</b></li>
+		<li><b>Calc</b></li>
+		<li><b>Iron</b></li>
+	</ul>
+</div>
+
+<div class="left"><%= @bread.name if @bread %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @bread.serving_size if @bread %></li>
+		<li><%= @bread.calories if @bread %></li>
+		<li><%= @bread.calories_from_fat if @bread %></li>
+		<li><%= @bread.total_fat if @bread %></li>
+		<li><%= @bread.saturated_fat if @bread %></li>
+		<li><%= @bread.trans_fat if @bread %></li>
+		<li><%= @bread.cholesterol if @bread %></li>
+		<li><%= @bread.sodium if @bread %></li>
+		<li><%= @bread.carbohydrates if @bread %></li>
+		<li><%= @bread.dietary_fiber if @bread %></li>
+		<li><%= @bread.sugars if @bread %></li>
+		<li><%= @bread.protein if @bread %></li>
+		<li><%= @bread.vitamin_a if @bread %></li>
+		<li><%= @bread.vitamin_c if @bread %></li>
+		<li><%= @bread.calcium if @bread %></li>
+		<li><%= @bread.iron if @bread %></li>
+	</ul>
+</div>
+
+<div class="left"><%= @sandwich.name if @sandwich %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @sandwich.serving_size if @sandwich %></li>
+		<li><%= @sandwich.calories if @sandwich %></li>
+		<li><%= @sandwich.calories_from_fat if @sandwich %></li>
+		<li><%= @sandwich.total_fat if @sandwich %></li>
+		<li><%= @sandwich.saturated_fat if @sandwich %></li>
+		<li><%= @sandwich.trans_fat if @sandwich %></li>
+		<li><%= @sandwich.cholesterol if @sandwich %></li>
+		<li><%= @sandwich.sodium if @sandwich %></li>
+		<li><%= @sandwich.carbohydrates if @sandwich %></li>
+		<li><%= @sandwich.dietary_fiber if @sandwich %></li>
+		<li><%= @sandwich.sugars if @sandwich %></li>
+		<li><%= @sandwich.protein if @sandwich %></li>
+		<li><%= @sandwich.vitamin_a if @sandwich %></li>
+		<li><%= @sandwich.vitamin_c if @sandwich %></li>
+		<li><%= @sandwich.calcium if @sandwich %></li>
+		<li><%= @sandwich.iron if @sandwich %></li>
+	</ul>
+</div>
+
+<!-- if a != nil && b != nil
+a + b
+if s.each, if s != nil
+a-->
+<!--         <%# @vegetables.each do |v| %>
+        check_box = "v", "name", {:checked => v.name, :disabled => true} %>
+        <%# end %> -->
+
+ <!--        <#% @vegetables.each do |vegetable| %>
+		<%#= vegetable.name %>
+		<#% end %> -->
+
+<div class="left"><%= @vegetable.name if @vegetable %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @vegetable.serving_size if @vegetable %></li>
+		<li><%= @vegetable.calories if @vegetable %></li>
+		<li><%= @vegetable.calories_from_fat if @vegetable %></li>
+		<li><%= @vegetable.total_fat if @vegetable %></li>
+		<li><%= @vegetable.saturated_fat if @vegetable %></li>
+		<li><%= @vegetable.trans_fat if @vegetable %></li>
+		<li><%= @vegetable.cholesterol if @vegetable %></li>
+		<li><%= @vegetable.sodium if @vegetable %></li>
+		<li><%= @vegetable.carbohydrates if @vegetable %></li>
+		<li><%= @vegetable.dietary_fiber if @vegetable %></li>
+		<li><%= @vegetable.sugars if @vegetable %></li>
+		<li><%= @vegetable.protein if @vegetable %></li>
+		<li><%= @vegetable.vitamin_a if @vegetable %></li>
+		<li><%= @vegetable.vitamin_c if @vegetable %></li>
+		<li><%= @vegetable.calcium if @vegetable %></li>
+		<li><%= @vegetable.iron if @vegetable %></li>
+
+<div class="left"><%= @condiment.name if @condiment %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @condiment.serving_size if @condiment %></li>
+		<li><%= @condiment.calories if @condiment %></li>
+		<li><%= @condiment.calories_from_fat if @condiment %></li>
+		<li><%= @condiment.total_fat if @condiment %></li>
+		<li><%= @condiment.saturated_fat if @condiment %></li>
+		<li><%= @condiment.trans_fat if @condiment %></li>
+		<li><%= @condiment.cholesterol if @condiment %></li>
+		<li><%= @condiment.sodium if @condiment %></li>
+		<li><%= @condiment.carbohydrates if @condiment %></li>
+		<li><%= @condiment.dietary_fiber if @condiment %></li>
+		<li><%= @condiment.sugars if @condiment %></li>
+		<li><%= @condiment.protein if @condiment %></li>
+		<li><%= @condiment.vitamin_a if @condiment %></li>
+		<li><%= @condiment.vitamin_c if @condiment %></li>
+		<li><%= @condiment.calcium if @condiment %></li>
+		<li><%= @condiment.iron if @condiment %></li>
+	</ul>
+</div>
+
+<div class="left"><%= @flatizza.name if @flatizza %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @flatizza.serving_size if @flatizza %></li>
+		<li><%= @flatizza.calories if @flatizza %></li>
+		<li><%= @flatizza.calories_from_fat if @flatizza %></li>
+		<li><%= @flatizza.total_fat if @flatizza %></li>
+		<li><%= @flatizza.saturated_fat if @flatizza %></li>
+		<li><%= @flatizza.trans_fat if @flatizza %></li>
+		<li><%= @flatizza.cholesterol if @flatizza %></li>
+		<li><%= @flatizza.sodium if @flatizza %></li>
+		<li><%= @flatizza.carbohydrates if @flatizza %></li>
+		<li><%= @flatizza.dietary_fiber if @flatizza %></li>
+		<li><%= @flatizza.sugars if @flatizza %></li>
+		<li><%= @flatizza.protein if @flatizza %></li>
+		<li><%= @flatizza.vitamin_a if @flatizza %></li>
+		<li><%= @flatizza.vitamin_c if @flatizza %></li>
+		<li><%= @flatizza.calcium if @flatizza %></li>
+		<li><%= @flatizza.iron if @flatizza %></li>
+	</ul>
+</div>
+
+<div class="left"><%= @salad.name if @salad %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @salad.serving_size if @salad %></li>
+		<li><%= @salad.calories if @salad %></li>
+		<li><%= @salad.calories_from_fat if @salad %></li>
+		<li><%= @salad.total_fat if @salad %></li>
+		<li><%= @salad.saturated_fat if @salad %></li>
+		<li><%= @salad.trans_fat if @salad %></li>
+		<li><%= @salad.cholesterol if @salad %></li>
+		<li><%= @salad.sodium if @salad %></li>
+		<li><%= @salad.carbohydrates if @salad %></li>
+		<li><%= @salad.dietary_fiber if @salad %></li>
+		<li><%= @salad.sugars if @salad %></li>
+		<li><%= @salad.protein if @salad %></li>
+		<li><%= @salad.vitamin_a if @salad %></li>
+		<li><%= @salad.vitamin_c if @salad %></li>
+		<li><%= @salad.calcium if @salad %></li>
+		<li><%= @salad.iron if @salad %></li>
+	</ul>
+</div>
+
+<div class="left"><%= @salad_dressing.name if @salad_dressing %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @salad_dressing.serving_size if @salad_dressing %></li>
+		<li><%= @salad_dressing.calories if @salad_dressing %></li>
+		<li><%= @salad_dressing.calories_from_fat if @salad_dressing %></li>
+		<li><%= @salad_dressing.total_fat if @salad_dressing %></li>
+		<li><%= @salad_dressing.saturated_fat if @salad_dressing %></li>
+		<li><%= @salad_dressing.trans_fat if @salad_dressing %></li>
+		<li><%= @salad_dressing.cholesterol if @salad_dressing %></li>
+		<li><%= @salad_dressing.sodium if @salad_dressing %></li>
+		<li><%= @salad_dressing.carbohydrates if @salad_dressing %></li>
+		<li><%= @salad_dressing.dietary_fiber if @salad_dressing %></li>
+		<li><%= @salad_dressing.sugars if @salad_dressing %></li>
+		<li><%= @salad_dressing.protein if @salad_dressing %></li>
+		<li><%= @salad_dressing.vitamin_a if @salad_dressing %></li>
+		<li><%= @salad_dressing.vitamin_c if @salad_dressing %></li>
+		<li><%= @salad_dressing.calcium if @salad_dressing %></li>
+		<li><%= @salad_dressing.iron if @salad_dressing %></li>
+	</ul>
+</div>
+
+<div class="left"><%= @soup.name if @soup %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @soup.serving_size if @soup %></li>
+		<li><%= @soup.calories if @soup %></li>
+		<li><%= @soup.calories_from_fat if @soup %></li>
+		<li><%= @soup.total_fat if @soup %></li>
+		<li><%= @soup.saturated_fat if @soup %></li>
+		<li><%= @soup.trans_fat if @soup %></li>
+		<li><%= @soup.cholesterol if @soup %></li>
+		<li><%= @soup.sodium if @soup %></li>
+		<li><%= @soup.carbohydrates if @soup %></li>
+		<li><%= @soup.dietary_fiber if @soup %></li>
+		<li><%= @soup.sugars if @soup %></li>
+		<li><%= @soup.protein if @soup %></li>
+		<li><%= @soup.vitamin_a if @soup %></li>
+		<li><%= @soup.vitamin_c if @soup %></li>
+		<li><%= @soup.calcium if @soup %></li>
+		<li><%= @soup.iron if @soup %></li>
+	</ul>
+</div>
+
+<div class="left"><%= @breakfast.name if @breakfast %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @breakfast.serving_size if @breakfast %></li>
+		<li><%= @breakfast.calories if @breakfast %></li>
+		<li><%= @breakfast.calories_from_fat if @breakfast %></li>
+		<li><%= @breakfast.total_fat if @breakfast %></li>
+		<li><%= @breakfast.saturated_fat if @breakfast %></li>
+		<li><%= @breakfast.trans_fat if @breakfast %></li>
+		<li><%= @breakfast.cholesterol if @breakfast %></li>
+		<li><%= @breakfast.sodium if @breakfast %></li>
+		<li><%= @breakfast.carbohydrates if @breakfast %></li>
+		<li><%= @breakfast.dietary_fiber if @breakfast %></li>
+		<li><%= @breakfast.sugars if @breakfast %></li>
+		<li><%= @breakfast.protein if @breakfast %></li>
+		<li><%= @breakfast.vitamin_a if @breakfast %></li>
+		<li><%= @breakfast.vitamin_c if @breakfast %></li>
+		<li><%= @breakfast.calcium if @breakfast %></li>
+		<li><%= @breakfast.iron if @breakfast %></li>
+	</ul>
+</div>
+
+<div class="left"><%= @dessert.name if @dessert %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @dessert.serving_size if @dessert %></li>
+		<li><%= @dessert.calories if @dessert %></li>
+		<li><%= @dessert.calories_from_fat if @dessert %></li>
+		<li><%= @dessert.total_fat if @dessert %></li>
+		<li><%= @dessert.saturated_fat if @dessert %></li>
+		<li><%= @dessert.trans_fat if @dessert %></li>
+		<li><%= @dessert.cholesterol if @dessert %></li>
+		<li><%= @dessert.sodium if @dessert %></li>
+		<li><%= @dessert.carbohydrates if @dessert %></li>
+		<li><%= @dessert.dietary_fiber if @dessert %></li>
+		<li><%= @dessert.sugars if @dessert %></li>
+		<li><%= @dessert.protein if @dessert %></li>
+		<li><%= @dessert.vitamin_a if @dessert %></li>
+		<li><%= @dessert.vitamin_c if @dessert %></li>
+		<li><%= @dessert.calcium if @dessert %></li>
+		<li><%= @dessert.iron if @dessert %></li>
+	</ul>
+</div>
+
+<div class="left"><%= @beverage.name if @beverage %></div>
+<div class="right">
+	<ul class="space">
+		<li><%= @beverage.serving_size if @beverage %></li>
+		<li><%= @beverage.calories if @beverage %></li>
+		<li><%= @beverage.calories_from_fat if @beverage %></li>
+		<li><%= @beverage.total_fat if @beverage %></li>
+		<li><%= @beverage.saturated_fat if @beverage %></li>
+		<li><%= @beverage.trans_fat if @beverage %></li>
+		<li><%= @beverage.cholesterol if @beverage %></li>
+		<li><%= @beverage.sodium if @beverage %></li>
+		<li><%= @beverage.carbohydrates if @beverage %></li>
+		<li><%= @beverage.dietary_fiber if @beverage %></li>
+		<li><%= @beverage.sugars if @beverage %></li>
+		<li><%= @beverage.protein if @beverage %></li>
+		<li><%= @beverage.vitamin_a if @beverage %></li>
+		<li><%= @beverage.vitamin_c if @beverage %></li>
+		<li><%= @beverage.calcium if @beverage %></li>
+		<li><%= @beverage.iron if @beverage %></li>
+	</ul>
+</div>
+<br>
+
+<div class="left">Totals</div>
+<div class="right">
+	<ul class="space">
+		<li><%= @totalsize %></li>
+		<li><%= @totalcalories %></li>
+		<li><%= @totalcalfat %></li>
+		<li><%= @totalfat %></li>
+		<li><%= @totalsatfat %></li>
+		<li><%= @totaltransfat %></li>
+		<li><%= @totalcholesterol %></li>
+		<li><%= @totalsodium %></li>
+		<li><%= @totalcarbohydrates %>	</li>
+		<li><%= @totalfiber %></li>
+		<li><%= @totalsugars %></li>
+		<li><%= @totalprotein %></li>
+		<li><%= @totalvitamina %></li>
+		<li><%= @totalvitaminc %></li>
+		<li><%= @totalcalcium %></li>
+		<li><%= @totaliron %></li>
+	</ul>
+</div>
+
+<div class="left">US FDA Daily Recommended Values</div>
+<div class="right">
+	<ul class="space">
+		<li>N/A</li>
+		<li>2000</li>
+		<li>585</li>
+		<li>65</li>
+		<li>20</li>
+		<li>0</li>
+		<li>300</li>
+		<li>2400</li>
+		<li>300</li>
+		<li>25</li>
+		<li>0</li>
+		<li>50</li>
+		<li>100</li>
+		<li>100</li>
+		<li>100</li>
+		<li>100</li>
+	</ul>
+</div>
 <%
 =begin
 <ul>
-<% @menu.breads.each do |bread| %>
-<%= bread.id %>
-<% end %>
 
 <% @menu.breads.each do |bread| %>
 <%= bread.id %>
@@ -80,6 +361,47 @@
  </ul>
 <%
 =end %>
+<br>
+<h3><b>Total Nutritional Information for Your Selected Items</b></h3>
+	<b>Serving Size</b> - <%= @totalsize %> grams | 
+	<b>Calories </b> - <%= @totalcalories %> | 
+	<b>Calories from Fat</b> - <%= @totalcalfat %> | 
+	<b>Total Fat</b> - <%= @totalfat %> grams | 
+<br><b>Saturated Fat</b> - <%= @totalsatfat %> grams |
+	<b>Trans Fat</b> - <%= @totaltransfat %> grams | 
+	<b>Cholesterol</b> - <%= @totalcholesterol %> milligrams |
+	<b>Sodium</b> - <%= @totalsodium %> milligrams |
+<br><b>Carbohydrates</b> - <%= @totalcarbohydrates %> grams |	
+	<b>Dietary Fiber</b> - <%= @totalfiber %> grams |
+	<b>Sugars</b> - <%= @totalsugars %> grams |
+	<b>Protein</b> - <%= @totalprotein %> grams |
+<br><b>Vitamin A</b> - <%= @totalvitamina %> % Daily Value |
+	<b>Vitamin C</b> - <%= @totalvitaminc%> % Daily Value |
+	<b>Calcium</b> - <%= @totalcalcium %> % Daily Value |
+	<b>Iron</b> - <%= @totaliron %> % Daily Value |
+<br>
+<h3><b>US FDA Recommended Daily Values</b></h3>
+	<b>Serving Size</b> - N/A | 
+	<b>Calories </b> - 2000 | 
+	<b>Calories from Fat</b> - 585 | 
+	<b>Total Fat</b> - 65 grams | 
+<br>
+	<b>Saturated Fat</b> - 20 grams |
+	<b>Trans Fat</b> - 0 grams | 
+	<b>Cholesterol</b> - 300 milligrams |
+	<b>Sodium</b> - 2400 milligrams |
+<br>
+	<b>Carbohydrates</b> - 300 grams |	
+	<b>Dietary Fiber</b> - 25 grams |
+	<b>Sugars</b> - 0 grams |
+	<b>Protein</b> - 50 grams |
+<br>
+	<b>Vitamin A</b> - 5000 International Units |
+	<b>Vitamin C</b> - 60 milligrams |
+	<b>Calcium</b> - 1000 milligrams |
+	<b>Iron</b> - 18 milligrams |
+<br>
+<br>
 <%= link_to "Back to menu", menu_path %>
-
-<%= debug(params) %>
+<br>
+<%#= debug(params) %>

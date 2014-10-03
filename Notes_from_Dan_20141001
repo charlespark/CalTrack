@@ -1,0 +1,34 @@
+create a base class 'food'
+bread, sandwich, etc. 'inherits from 'food''
+class beverage < food
+^^^^^DONE^^^^^
+
+
+Grab all the checked items
+Put all the ids in one array
+
+Make one array of ALL the selected object IDs
+Then, loop through each ID (treating each as a food) and then sum through all the IDs.
+
+
+Make a LARGE ARRAY that has all the objects (and not the object_ids)
+
+.find using 
+
+Calculate
+1. Grab all the ids
+1.5 Find them in the database
+2. Once they are all in one array, these can be summed up.
+
+Food.find instead of Bread.find
+
+And them sum it all up.
+
+When doing the find to populate the array with selected items, find the objects and push the found objects into the array.
+Dan says this will be a list of objects
+
+
+Where is the empty ID entry coming from in check-box categories? 
+>>> Not an issue, at least for the moment
+
+Look for :include_hidden false to the checkbox area
